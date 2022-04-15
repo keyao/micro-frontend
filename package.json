@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node"
+    "install:main": "cd main && pnpm install",
+    "start:main": "cd main && pnpm run dev"
   },
   "repository": {
     "type": "git",
