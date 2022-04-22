@@ -1,10 +1,10 @@
 <template>
-    <div>LOGIN</div>
+    <div>404</div>
 </template>
 
-<script lang="ts">
+<script>
     export default {
-        name: "Login"
+        name: "404"
     }
 </script>
 

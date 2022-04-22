@@ -1,3 +1,4 @@
+export {}
 import { createApp } from 'vue'
 import App from './App.vue'
 import './style/common.less'
