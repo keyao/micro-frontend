@@ -1,0 +1,54 @@
+Arguments: 
+  D:\tool\nodejs\node.exe D:\tool\nodejs\node_global\node_modules\yarn\bin\yarn.js global add @vue/cli
+
+PATH: 
+  E:\learnspace\micro-frontend\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;%NVM_HOME%;%NVM_SYMLINK%;D:\tool\nodejs\;D:\tool\nodejs\node_global\pnpm;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;D:\tool\nodejs\node_global;D:\nvm;D:\nodejs;C:\Users\Administrator\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\learnspace\micro-frontend\package.json: Unexpected token } in JSON at position 611
+      at JSON.parse (<anonymous>)
+      at D:\tool\nodejs\node_global\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (D:\tool\nodejs\node_global\node_modules\yarn\lib\cli.js:310:30)
+      at D:\tool\nodejs\node_global\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "micro-frontend",
+    "version": "1.0.0",
+    "description": "micro-frontend demo",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "install:main": "cd main && pnpm install",
+      "start:main": "cd main && pnpm run dev"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/keyao/micro-frontend.git"
+    },
+    "keywords": [
+      "micro-frontend"
+    ],
+    "author": "yaoKe",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/keyao/micro-frontend/issues"
+    },
+    "homepage": "https://github.com/keyao/micro-frontend#readme",
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

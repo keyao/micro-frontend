@@ -38,5 +38,8 @@ export default defineConfig({
       '@':resolve('src'),
       '@api':resolve('src/api')
     }
+  },
+  server:{
+    port:1000
   }
 })

@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install:main": "cd main && pnpm install",
-    "start:main": "cd main && pnpm run dev"
+    "start:main": "cd main && pnpm run dev",
+    "install:vue2": "cd vue2-webpack && npm install",
+    "start:vue2": "cd vue2-webpack && npm run serve"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/keyao/micro-frontend/issues"
   },
-  "homepage": "https://github.com/keyao/micro-frontend#readme"
+  "homepage": "https://github.com/keyao/micro-frontend#readme",
+  "dependencies": {
+
+  }
 }

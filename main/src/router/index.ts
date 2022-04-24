@@ -39,7 +39,7 @@ const router:Router = createRouter({
         RootRoute,
         LoginRoute,
         ...AsyncRoutes,
-        ...NotFundRoute
+        // ...NotFundRoute
     ]
 })
 
