@@ -8,7 +8,9 @@
     "install:main": "cd main && pnpm install",
     "start:main": "cd main && pnpm run dev",
     "install:vue2": "cd vue2-webpack && npm install",
-    "start:vue2": "cd vue2-webpack && npm run serve"
+    "start:vue2": "cd vue2-webpack && npm run serve",
+    "install:react": "cd react-webpack && pnpm install",
+    "start:react": "cd react-webpack && pnpm start"
   },
   "repository": {
     "type": "git",

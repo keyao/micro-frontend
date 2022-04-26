@@ -1,12 +1,17 @@
 <template>
-    vue2
     <div id="container"></div>
 </template>
 
-<script>
-    export default {
-        name: "vue2"
+<script lang="ts" setup>
+  import {start} from "qiankun";
+
+  onMounted(()=>{
+    if (!window.qiankunStarted) {
+      window.qiankunStarted = true;
+      start();
     }
+  })
+
 </script>
 
 <style scoped>

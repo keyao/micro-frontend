@@ -5,7 +5,6 @@ import './style/common.less'
 import router from "./router";
 import {start,registerMicroApps} from 'qiankun'
 
-
 const microApps = [{
     name:'vue',
     entry: '//localhost:8080',
@@ -13,11 +12,10 @@ const microApps = [{
     activeRule: '/micro/vue2',
 }]
 
-
+let a:string= aaa
 
 const app = createApp(App)
 registerMicroApps(microApps)
 
-start()
 app.use(router)
 app.mount('#app')

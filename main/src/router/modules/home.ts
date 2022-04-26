@@ -3,13 +3,13 @@ import {RouteRecordRaw} from "vue-router";
 const LAYOUT = () => import('@/layout/Index.vue')
 
 const home:RouteRecordRaw = {
-    path:'/home',
-    name:'Home',
+    path:'/mainHome',
+    name:'MainHome',
     component:LAYOUT,
-    redirect:'/home/main',
+    redirect:'/mainHome/mainIndex',
     children:[{
-        path:'main',
-        name:'Main',
+        path:'mainIndex',
+        name:'MainIndex',
         component:()=> import('@/views/home/Home.vue')
     }]
 }

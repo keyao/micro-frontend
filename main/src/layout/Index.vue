@@ -36,16 +36,18 @@
         name:'111'
     })
     const router = useRouter()
-    const select = (index:string,indexPath:string,item:any) => {
+    const select =async (index:string,indexPath:string,item:any) => {
         console.log(index,indexPath,item)
         if (index === '2') {
             router.push({
                 path:'/micro'
             })
         } else  if (index === '4'){
-            router.push({
-                path:'/home'
+          console.log(router.getRoutes())
+          const navigationResult  = await  router.push({
+                path:'/mainHome/mainIndex'
             })
+          console.log(navigationResult)
         }
     }
 </script>

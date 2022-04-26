@@ -1,15 +1,16 @@
-import {RouteRecordRaw, createWebHistory, Router, createRouter} from 'vue-router'
+import {RouteRecordRaw, createWebHistory,createWebHashHistory, Router, createRouter} from 'vue-router'
 import routerConfig  from "../config/routerConfig";
 
 // 默认路由
 const RootRoute:RouteRecordRaw = {
     path:'/',
+    name:'MainRoot',
     redirect: routerConfig.REDIRECT_PAGE
 }
 // 登录路由
 const LoginRoute:RouteRecordRaw = {
     path:'/login',
-    name:'Login',
+    name:'MainLogin',
     component:()=>import('@/views/login/Login.vue')
 }
 // 404路由
@@ -39,7 +40,7 @@ const router:Router = createRouter({
         RootRoute,
         LoginRoute,
         ...AsyncRoutes,
-        // ...NotFundRoute
+        ...NotFundRoute
     ]
 })
 
