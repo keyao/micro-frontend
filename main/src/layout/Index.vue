@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <div class="layout-top"></div>
+        <div class="layout-top">Moric</div>
         <div class="layout-main">
             <div class="layout-main-nav">
                 <el-menu class="menu">
@@ -11,13 +11,13 @@
                             default-active="2"
                             @select="select"
                             text-color="#fff">
-                        <el-menu-item route="/login" index="2">
+                        <el-menu-item index="2">
                             <span>vue2</span>
                         </el-menu-item>
-                        <el-menu-item route="/index" index="3">
+                        <el-menu-item  index="3">
                             <span>react</span>
                         </el-menu-item>
-                        <el-menu-item route="/home" index="4">
+                        <el-menu-item  index="4">
                             <span>home</span>
                         </el-menu-item>
                     </el-menu>
@@ -32,22 +32,19 @@
 
 <script lang="ts" setup>
     import AppMain from "./AppMain.vue";
+    import AsyncRoutes from "../router";
     const state = reactive({
         name:'111'
     })
+    console.log([AsyncRoutes])
     const router = useRouter()
-    const select =async (index:string,indexPath:string,item:any) => {
-        console.log(index,indexPath,item)
+    const select = (index:string,indexPath:string,item:any) => {
         if (index === '2') {
-            router.push({
-                path:'/micro'
-            })
+            router.replace('/vue/vue2')
         } else  if (index === '4'){
-          console.log(router.getRoutes())
-          const navigationResult  = await  router.push({
-                path:'/mainHome/mainIndex'
-            })
-          console.log(navigationResult)
+          router.replace('/main/home')
+        } else {
+          router.replace('/main/home')
         }
     }
 </script>

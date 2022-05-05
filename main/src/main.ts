@@ -9,10 +9,8 @@ const microApps = [{
     name:'vue',
     entry: '//localhost:8080',
     container: '#container',
-    activeRule: '/micro/vue2',
+    activeRule: '/vue/vue2',
 }]
-
-let a:string= aaa
 
 const app = createApp(App)
 registerMicroApps(microApps)

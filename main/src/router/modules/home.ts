@@ -2,16 +2,16 @@ import {RouteRecordRaw} from "vue-router";
 
 const LAYOUT = () => import('@/layout/Index.vue')
 
-const home:RouteRecordRaw = {
-    path:'/mainHome',
-    name:'MainHome',
+const homeRoute:RouteRecordRaw = {
+    path:'/main',
+    name:'Main',
     component:LAYOUT,
-    redirect:'/mainHome/mainIndex',
+    redirect:'/main/home',
     children:[{
-        path:'mainIndex',
-        name:'MainIndex',
+        path:'home',
+        name:'Home',
         component:()=> import('@/views/home/Home.vue')
     }]
 }
 
-export default home
+export default homeRoute

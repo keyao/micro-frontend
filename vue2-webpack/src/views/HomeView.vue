@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>HOME</div>
+    <h1>Welcome to VUE2 Home</h1>
   </div>
 </template>
 
@@ -19,7 +19,6 @@ export default {
     return{}
   },
   mounted() {
-    console.log(this.$router.getRoutes())
   }
 }
 

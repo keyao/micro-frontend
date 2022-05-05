@@ -6,13 +6,13 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/vue2',
-    name: 'Vue2Main',
-    component: HomeView
+    path: '/',
+    name: 'Root',
+    redirect:'/home',
   },
   {
     path: '/about',
-    name: 'Vue2About',
+    name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -20,7 +20,7 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'Vue2Home',
+    name: 'Home',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
