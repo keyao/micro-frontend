@@ -10,7 +10,11 @@ const homeRoute:RouteRecordRaw = {
     children:[{
         path:'home',
         name:'Home',
-        component:()=> import('@/views/home/Home.vue')
+        component:()=> import('@/views/home/Home.vue'),
+        meta:{
+            title:'主页',
+            icon:''
+        }
     }]
 }
 

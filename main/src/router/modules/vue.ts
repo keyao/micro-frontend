@@ -10,11 +10,17 @@ const vueRoute:RouteRecordRaw = {
     children:[{
         path:'vue2',
         name:'Vue2',
-        component:()=> import('@/views/vue/Vue.vue')
+        component:()=> import('@/views/vue/Vue.vue'),
+        meta:{
+            title:'vue2页面'
+        }
     },{
         path:'vue3',
         name:'Vue3',
-        component:()=> import('@/views/vue/Vue.vue')
+        component:()=> import('@/views/vue/Vue.vue'),
+        meta:{
+            title:'vue3页面'
+        }
     }]
 }
 

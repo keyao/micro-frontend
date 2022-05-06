@@ -34,7 +34,7 @@ Object.keys(modules).forEach((key)=>{
     AsyncRoutes.push(...modList)
 })
 
-console.log(AsyncRoutes)
+
 const router:Router = createRouter({
     history:createWebHistory(),
     routes:[

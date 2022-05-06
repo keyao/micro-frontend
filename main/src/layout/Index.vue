@@ -10,16 +10,14 @@
                             class="el-menu-vertical-demo"
                             default-active="2"
                             @select="select"
+                            router
                             text-color="#fff">
-                        <el-menu-item index="2">
-                            <span>vue2</span>
+                      <template v-for="item of AsyncRoutes">
+                        <el-menu-item  :index="item.path">
+                          <span>{{ item.name}}</span>
                         </el-menu-item>
-                        <el-menu-item  index="3">
-                            <span>react</span>
-                        </el-menu-item>
-                        <el-menu-item  index="4">
-                            <span>home</span>
-                        </el-menu-item>
+                      </template>
+
                     </el-menu>
                 </el-menu>
             </div>
@@ -32,20 +30,19 @@
 
 <script lang="ts" setup>
     import AppMain from "./AppMain.vue";
-    import AsyncRoutes from "../router";
+    import {AsyncRoutes} from "../router";
     const state = reactive({
         name:'111'
     })
-    console.log([AsyncRoutes])
     const router = useRouter()
     const select = (index:string,indexPath:string,item:any) => {
-        if (index === '2') {
-            router.replace('/vue/vue2')
-        } else  if (index === '4'){
-          router.replace('/main/home')
-        } else {
-          router.replace('/main/home')
-        }
+        // if (index === '2') {
+        //     router.replace('/vue/vue2')
+        // } else  if (index === '4'){
+        //   router.replace('/main/home')
+        // } else {
+        //   router.replace('/main/home')
+        // }
     }
 </script>
 
