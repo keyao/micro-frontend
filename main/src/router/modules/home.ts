@@ -7,6 +7,9 @@ const homeRoute:RouteRecordRaw = {
     name:'Main',
     component:LAYOUT,
     redirect:'/main/home',
+    meta:{
+        title:'主页'
+    },
     children:[{
         path:'home',
         name:'Home',

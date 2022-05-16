@@ -7,6 +7,9 @@ const vueRoute:RouteRecordRaw = {
     name:'Vue',
     component:LAYOUT,
     redirect:'/vue/vue2',
+    meta:{
+      title:'VUE系统'
+    },
     children:[{
         path:'vue2',
         name:'Vue2',

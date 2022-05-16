@@ -10,14 +10,20 @@
                             class="el-menu-vertical-demo"
                             default-active="2"
                             @select="select"
-                            router
                             text-color="#fff">
                       <template v-for="item of AsyncRoutes">
-                        <el-menu-item  :index="item.path">
-                          <span>{{ item.name}}</span>
+                        <el-sub-menu :index="item.path" v-if="item.children?.length > 1">
+                          <template #title>
+                            <span>{{  item.meta?.title }}</span>
+                          </template>
+                          <el-menu-item v-for="cItem of item.children"  :index="cItem.path">
+                            <span>{{ cItem.meta?.title}}</span>
+                          </el-menu-item>
+                        </el-sub-menu>
+                        <el-menu-item v-else  :index="item.path">
+                          <span>{{ item.meta.title}}</span>
                         </el-menu-item>
                       </template>
-
                     </el-menu>
                 </el-menu>
             </div>
@@ -35,14 +41,16 @@
         name:'111'
     })
     const router = useRouter()
-    const select = (index:string,indexPath:string,item:any) => {
-        // if (index === '2') {
-        //     router.replace('/vue/vue2')
-        // } else  if (index === '4'){
-        //   router.replace('/main/home')
-        // } else {
-        //   router.replace('/main/home')
-        // }
+    const select = (index:string,indexPath:string,item:any,routeResult:any) => {
+      let path = ''
+      if (indexPath.length >=2) {
+        path = indexPath[0].split(':')[0] + indexPath[1]
+      } else {
+        path = index
+      }
+
+
+      router.replace(path)
     }
 </script>
 
