@@ -1,6 +1,6 @@
 <template>
     <div class="layout">
-        <div class="layout-top">Moric</div>
+        <div class="layout-top">Micro-Frontend</div>
         <div class="layout-main">
             <div class="layout-main-nav">
                 <el-menu class="menu">
@@ -61,6 +61,9 @@
         &-top{
             height:60px;
             background: #2c3e50;
+          color:#ffffff;
+          line-height: 60px;
+          font-size: 30px;
         }
         &-main{
             display: flex;
