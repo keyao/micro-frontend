@@ -1,6 +1,8 @@
 <template>
     <div class="layout">
-        <div class="layout-top">Micro-Frontend</div>
+        <div class="layout-top">
+          <custom-image style="height: 60px;width: 60px"></custom-image>
+          Micro-Frontend</div>
         <div class="layout-main">
             <div class="layout-main-nav">
                 <el-menu class="menu">

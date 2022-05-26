@@ -3,8 +3,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './style/common.less'
 import router from "./router";
-import {start,registerMicroApps} from 'qiankun'
-
+// 引入qiankun
+import {registerMicroApps} from 'qiankun'
+// 创建子模块
 const microApps = [{
     name:'vue2',
     entry: '//localhost:8080',
@@ -17,8 +18,8 @@ const microApps = [{
     activeRule: '/vue/vue3',
 }]
 
-const app = createApp(App)
 registerMicroApps(microApps)
+const app = createApp(App)
 
 app.use(router)
 app.mount('#app')
