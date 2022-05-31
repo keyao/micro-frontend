@@ -15,14 +15,21 @@ const vueRoute:RouteRecordRaw = {
         name:'Vue2',
         component:()=> import('@/views/vue/Vue.vue'),
         meta:{
-            title:'vue2页面'
+            title:'vue2-webpack页面'
         }
     },{
-        path:'vue3',
-        name:'Vue3',
+        path:'vue3v',
+        name:'Vue3v',
         component:()=> import('@/views/vue/Vue.vue'),
         meta:{
-            title:'vue3页面'
+            title:'vue3-vite页面'
+        }
+    },{
+        path:'vue3w',
+        name:'Vue3w',
+        component:()=> import('@/views/vue/Vue.vue'),
+        meta:{
+            title:'vue3-webpack页面'
         }
     }]
 }

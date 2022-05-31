@@ -17,7 +17,7 @@ function render(props: any) {
 
 renderWithQiankun({
     mount(props) {
-        console.log("vue3sub mount");
+        console.log("vue3sub mount",props);
         render(props);
     },
     bootstrap() {

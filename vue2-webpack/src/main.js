@@ -15,7 +15,7 @@ function render(props = {}) {
   const { container } = props;
   router = new VueRouter({
     base: window.__POWERED_BY_QIANKUN__ ? '/vue/vue2' : '/',
-    mode: 'hash',
+    mode: 'history',
     routes,
   });
 

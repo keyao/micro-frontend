@@ -16,7 +16,7 @@ const routes:RouteRecordRaw[] = [{
 
 // @ts-ignore
 const router = createRouter({
-    history:createWebHashHistory(window.__POWERED_BY_QIANKUN__ ? "/vue/vue3" : "/"),
+    history:createWebHashHistory(window.__POWERED_BY_QIANKUN__ ? "/vue/vue3v" : "/"),
     routes
 })
 

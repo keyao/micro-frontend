@@ -12,7 +12,9 @@
     "install:vue3": "cd vue3-vite && pnpm install",
     "start:vue3": "cd vue3-vite && pnpm run dev",
     "install:react": "cd react-webpack && pnpm install",
-    "start:react": "cd react-webpack && pnpm start"
+    "start:react": "cd react-webpack && pnpm start",
+    "install:vue3w": "cd vue3-webpack && npm run install",
+    "start:vue3w":"cd vue3-webpack && npm run serve"
   },
   "repository": {
     "type": "git",

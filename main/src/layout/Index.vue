@@ -1,33 +1,30 @@
 <template>
     <div class="layout">
         <div class="layout-top">
-          <custom-image style="height: 60px;width: 60px"></custom-image>
           Micro-Frontend</div>
         <div class="layout-main">
             <div class="layout-main-nav">
-                <el-menu class="menu">
-                    <el-menu
-                            active-text-color="#ffd04b"
-                            background-color="#545c64"
-                            class="el-menu-vertical-demo"
-                            default-active="2"
-                            @select="select"
-                            text-color="#fff">
-                      <template v-for="item of AsyncRoutes">
-                        <el-sub-menu :index="item.path" v-if="item.children?.length > 1">
-                          <template #title>
-                            <span>{{  item.meta?.title }}</span>
-                          </template>
-                          <el-menu-item v-for="cItem of item.children"  :index="cItem.path">
-                            <span>{{ cItem.meta?.title}}</span>
-                          </el-menu-item>
-                        </el-sub-menu>
-                        <el-menu-item v-else  :index="item.path">
-                          <span>{{ item.meta.title}}</span>
-                        </el-menu-item>
-                      </template>
-                    </el-menu>
-                </el-menu>
+              <el-menu
+                  active-text-color="#ffd04b"
+                  background-color="#545c64"
+                  class="el-menu-vertical-demo menu"
+                  default-active="2"
+                  @select="select"
+                  text-color="#fff">
+                <template v-for="item of AsyncRoutes">
+                  <el-sub-menu :index="item.path" v-if="item.children?.length > 1">
+                    <template #title>
+                      <span>{{  item.meta?.title }}</span>
+                    </template>
+                    <el-menu-item v-for="cItem of item.children"  :index="cItem.path">
+                      <span>{{ cItem.meta?.title}}</span>
+                    </el-menu-item>
+                  </el-sub-menu>
+                  <el-menu-item v-else  :index="item.path">
+                    <span>{{ item.meta.title}}</span>
+                  </el-menu-item>
+                </template>
+              </el-menu>
             </div>
             <div class="layout-main-content">
                 <AppMain></AppMain>
@@ -51,7 +48,7 @@
         path = index
       }
 
-
+      console.log(path)
       router.replace(path)
     }
 </script>

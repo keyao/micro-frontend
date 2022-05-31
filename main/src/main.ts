@@ -12,10 +12,15 @@ const microApps = [{
     container: '#container',
     activeRule: '/vue/vue2',
 },{
-    name:'vue3',
+    name:'vue3Vite',
     entry: '//localhost:8000',
     container: '#container',
-    activeRule: '/vue/vue3',
+    activeRule: '/vue/vue3v',
+},{
+    name:'vue3Webpack',
+    entry: '//localhost:10001',
+    container: '#container',
+    activeRule: '/vue/vue3w',
 }]
 
 registerMicroApps(microApps)
