@@ -1,24 +1,16 @@
-console.log(this)
-const fn = () => {
-    console.log(this)
-}
-const obj = {
-    a:'1',
-    fn:function (){
-        console.log(this)
-        obj.b.fn()
-    },
-    b:{
-        c:'2',
-        fn:function (){
-            console.log(this)
-            console.log(this.h())
-        },
-        h:() => {
-            console.log(this)
+
+let it = fn()
+
+function fn() {
+    let index = 0;
+    return {
+        next:function () {
+            return index++
         }
-    },
-    d:this
+    }
 }
 
-obj.fn()
+console.log(it.next())
+console.log(it.next())
+console.log(it.next())
+console.log(it.next())

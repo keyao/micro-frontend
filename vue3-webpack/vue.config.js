@@ -2,9 +2,10 @@ const { defineConfig } = require('@vue/cli-service')
 const path = require("path");
 module.exports = defineConfig({
   transpileDependencies: true,
+  lintOnSave:false,
   devServer:{
     // 监听端口
-    port: 10001,
+    port: 3000,
     // 关闭主机检查，使微应用可以被 fetch
     // 配置跨域请求头，解决开发环境的跨域问题
     headers: {

@@ -18,7 +18,7 @@ const microApps = [{
     activeRule: '/vue/vue3v',
 },{
     name:'vue3Webpack',
-    entry: '//localhost:10001',
+    entry: '//localhost:3000',
     container: '#container',
     activeRule: '/vue/vue3w',
 }]

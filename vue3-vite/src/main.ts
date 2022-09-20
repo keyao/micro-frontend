@@ -2,6 +2,10 @@ import {App, createApp } from 'vue'
 import app from './App.vue'
 import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helper';
 import router from "./router";
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+
 
 let root: App;
 
@@ -9,6 +13,7 @@ function render(props: any) {
     const { container } = props;
     root = createApp(app)
     root.use(router)
+    root.use(ElementPlus)
     const c = container
         ? container.querySelector("#app")
         : document.getElementById("app")

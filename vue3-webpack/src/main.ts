@@ -4,14 +4,14 @@ import './registerServiceWorker'
 import routes from './router'
 import {createRouter, createWebHashHistory} from "vue-router";
 if (window.__POWERED_BY_QIANKUN__) {
-    __webpack_public_path__ = (window as any).__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
+    __webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__;
 }
 
 const app = createApp(App)
 let router = null
 function render(props:any) {
     router = createRouter({
-        history: createWebHashHistory(window.__POWERED_BY_QIANKUN__ ? "/vue/vue3v" : "/"),
+        history: createWebHashHistory(window.__POWERED_BY_QIANKUN__ ? "/vue/vue3w" : "/"),
         routes
     })
     const { container } = props
@@ -20,7 +20,8 @@ function render(props:any) {
 }
 
 // 独立运行时
-if (!(window as any).__POWERED_BY_QIANKUN__) {
+
+if (!window.__POWERED_BY_QIANKUN__) {
     render({});
 }
 

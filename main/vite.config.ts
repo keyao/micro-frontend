@@ -20,11 +20,6 @@ export default defineConfig({
         /\.md$/, // .md
       ],
       // global imports to register
-      imports: [
-        // presets
-        'vue',
-        'vue-router',
-      ],
       resolvers: [ElementPlusResolver()],
       dts: './types/auto-imports.d.ts',
     }),
